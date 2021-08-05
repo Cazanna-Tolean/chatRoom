@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main_menu{
+            background-color: yellowgreen;
+            max-width:800px;
+            width: 100%;
+            min-width: 600px;
+            max-height:800px;
+            height: 500px;
+            padding: 0px;
+            float:left;
+        }
+
+        .embed_chat{
+            float:left;
+            height: 600px;
+            width:500px;
+            margin-top: 100px;
+            position: absolute;
+        }
+
+        .embed_icon{
+            float:left;
+        }
+    </style>
+    <script src="./js/index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main_menu">
+        主畫面
+    </div>
+    <img class="embed_icon" src="./imgs/embed_fold_icon.jpg" alt="展開">
+    <div style=" width: auto; height: auto; padding: 2px;">
+    <iframe class="embed_chat" style="display:inline-block;"
+    src="./index.html"    
+    frameborder="0" title="chatroom" allowfullscreen
+    ></iframe>
+    </div>
+    
+
+    <!-- <iframe width="560" height="315" src="https://www.google.com" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+</body>
+</html>
+
+<script>
+    //摺疊「嵌入」的聊天登入視窗
+let embedLogin=document.getElementsByClassName('embed_icon');
+embedLogin[0].addEventListener('click',function(){
+    if($('.embed_chat')[0].style.display=="inline-block"){
+        $('.embed_chat').hide();
+    }else{
+        $('.embed_chat').fadeIn();
+    }
+});
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天室</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="lib/css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="lib/css/jquery.emoji.css" />
+    <script src="../app.js" defer></script>
+</head>
+<body>
+    <div class="login">
+        <img class="fold_icon" src="./imgs/fold_icon.jpg" alt="摺疊">
+        <div class="login_fold" style="display: block;">
+        <h2>用户登錄</h2>
+        <div>用户名:</div>
+        <input type="text" style="text-align: center; font-size: 16px; color: rgb(231, 118, 118);" class="login_name">
+        <div>選擇聊天頭像</div>
+        <div class="avatars" id="login_avatar">
+            <div class="avatar active" style="background-image: url('./imgs/1.jpg'); background-size: cover;"></div>
+            
+            <div class="avatar" style="background-image: url('./imgs/2.jpg'); background-size: cover;"></div>
+            <div class="avatar" style="background-image: url('./imgs/3.jpg'); background-size: cover;"></div>
+            <div class="avatar" style="background-image: url('./imgs/4.jpg'); background-size: cover;"></div>
+            <div class="avatar" style="background-image: url('./imgs/5.jpg'); background-size: cover;"></div>
+        </div>
+        <button class="goChat">登錄</button>
+        </div>
+    </div>
+    <div class="out" style="display: none;">
+        <div class="left">
+            <div class="top">
+                <!-- <div class="avatar" style="background-image: url('./imgs/1.jpg'); background-size: cover;"></div> -->
+                <img class="avatar_url avatar" src="imgs/3.jpg"/ alt="失效">
+                &nbsp; 
+                <span class="loginSucc_name">布丁</span>
+            </div>
+            <div class="nth" style="color: #bfa;">用户列表</div>
+            <ul class="list">
+                
+            </ul>
+        </div>
+        <div class="right">
+            <div class="right_top">聊天室(<span id="user_amount">0</span>人)</div>
+            <div class="chat">
+                
+            </div>
+            <div class="word">
+                <!-- <textarea class="message_content" contenteditable="contenteditable"></textarea> -->
+                <div class="message_content" contenteditable></div>
+                <!-- <a href="javascript:;" title="圖片" class="file_a_tag"> -->
+                <label>
+                    <img class="file_img" src="./imgs/folder.jpg" alt="上傳"/>
+                    <input type="file" id="file" style="display: none;"/>
+                </label>
+                <label>
+                <button class="emoji_place" style="visibility: hidden;"></button>
+                <img class="emoji_img" src="./imgs/emoji_standard.jpg" alt="表情"/>        
+                <!-- </a> -->                
+                </label>
+                <button class="send">發送</button>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js" defer></script>
+    <!-- 引入emoji -->
+    <script src="lib/script/jquery.mCustomScrollbar.min.js"></script>
+    <script src="lib/script/jquery.emoji.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
